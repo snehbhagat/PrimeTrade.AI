@@ -58,7 +58,7 @@ frontend/
 ## **Backend Setup**
 **Step 1 - Clone the repository and install dependencies**
 
-git clone https://github.com/your-username/taskmanager-api.git
+git clone https://github.com/snehbhagat/PrimeTrade.AI.git
 
 cd taskmanager-api
 
