@@ -10,7 +10,8 @@ const taskRoutes = require('./routes/v1/taskRoutes');
 
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-const swaggerDoc = YAML.load('./swagger.yaml');
+const path = require('path');
+const swaggerDoc = YAML.load(path.join(__dirname, '../swagger.yaml'));
 
 const app = express();
 
