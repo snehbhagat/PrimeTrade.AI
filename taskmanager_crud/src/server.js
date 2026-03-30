@@ -14,8 +14,7 @@ const swaggerDoc = YAML.load('./swagger.yaml');
 
 const app = express();
 
-// Middleware
-app.use(helmet());
+// CORS must come first before everything
 app.use(cors({
   origin: 'https://prime-trade-ai-b1t9.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -23,7 +22,11 @@ app.use(cors({
   credentials: true
 }));
 
+// Handle preflight requests
 app.options('*', cors());
+
+// Helmet after CORS
+app.use(helmet());
 app.use(express.json());
 
 // Swagger
